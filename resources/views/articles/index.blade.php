@@ -1,5 +1,10 @@
 @extends('layout')
 
 @section('content')
-    <h1>About Me: {{ $first_name }} {{ $last_name }}</h1>
+    @foreach ($articles as $article)
+        {{$article->title}}
+        {{$article->body}}
+    @endforeach
+
+    <h1>{{$articles}}</h1>
 @endsection

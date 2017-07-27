@@ -5,6 +5,16 @@
 
     <hr/>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     {!! Form::open(['url' => 'articles']) !!}
     <div class="form-group">
         {!! Form::label('title', 'Title:') !!}
@@ -15,7 +25,7 @@
         {!! Form::textarea('body', null) !!}
     </div>
     <div class="form-group">
-        {!! Form::submit('Add Article') !!}
+        {!! Form::submit('Articles') !!}
     </div>
     {!! Form::close() !!}
 @endsection

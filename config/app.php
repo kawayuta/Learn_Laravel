@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'jp',
 
     /*
     |--------------------------------------------------------------------------
@@ -232,4 +232,7 @@ return [
     ],
 
 
+    Barryvdh\Debugbar\ServiceProvider::class,
+
+    'Debugbar' => Barryvdh\Debugbar\Facade::class,
 ];

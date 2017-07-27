@@ -1,4 +1,5 @@
 <?php
 
-Route::resource('articles', 'Article');
-Route::get('/', 'Article@index');
+Route::resource('articles', 'ArticlesController');
+Route::get('/', 'ArticlesController@index');
+
