@@ -1,31 +1,47 @@
-@extends('layout')
-
+@extends('layouts.app')
 @section('content')
-    <h1>Write a New Article</h1>
 
-    <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+                <div class="panel panel-default">
+                    <div class="panel-heading">イベントの作成</div>
+                    <div class="panel-body">
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            {!! Form::open(['url' => 'articles', 'files' => 'true']) !!}
+                            <div class="form-group">
+                                {!! Form::label('title', 'Title:') !!}
+                                {!! Form::text('title', null) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('body', 'Body:') !!}
+                                {!! Form::textarea('body', null) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('fig_orig', 'Thumbnail:') !!}
+                                {!! Form::file('data', null) !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::submit('Articles') !!}
+                            </div>
+                            {!! Form::close() !!}
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-    @endif
-
-    {!! Form::open(['url' => 'articles']) !!}
-    <div class="form-group">
-        {!! Form::label('title', 'Title:') !!}
-        {!! Form::text('title', null) !!}
     </div>
-    <div class="form-group">
-        {!! Form::label('body', 'Body:') !!}
-        {!! Form::textarea('body', null) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::submit('Articles') !!}
-    </div>
-    {!! Form::close() !!}
 @endsection

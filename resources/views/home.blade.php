@@ -2,20 +2,88 @@
 @section('content')
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            @foreach ($articles->reverse() as $article)
-                <div class="panel panel-default">
 
-                    <div class="panel-heading">{{$article->title}}</div>
-
-                    <div class="panel-body">
-                            {{$article->body}}
-                    </div>
-
-                </div>
-            @endforeach
+    <div class=" col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Model
+            </div>
+            <div class="panel-body-fl">
+            </div>
         </div>
     </div>
+
+    <div class=" col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                View
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
+    <div class=" col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Controller
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
+    <div class=" col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Routes
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
+    <div class=" col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Redirect
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
+    <div class=" col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                ActiveRecord
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Validation
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Command
+            </div>
+            <div class="panel-body-fl">
+            </div>
+        </div>
+    </div>
+
 </div>
 @endsection
