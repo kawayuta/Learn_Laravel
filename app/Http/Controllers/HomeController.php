@@ -24,7 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $articles = Article::all();
-        return view('home',compact('articles'));
+        $articles_model = Article::where('category','Model')->get();
+        $articles_view = Article::where('category','View')->get();
+        $articles_controller = Article::where('category','Controller')->get();
+
+        return view('home',compact('articles','articles_model', 'articles_view', 'articles_controller'));
     }
 }

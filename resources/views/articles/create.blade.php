@@ -20,6 +20,7 @@
                             @endif
 
                             {!! Form::open(['url' => 'articles', 'files' => 'true']) !!}
+
                             <div class="form-group">
                                 {!! Form::label('title', 'Title:') !!}
                                 {!! Form::text('title', null) !!}
@@ -28,13 +29,26 @@
                                 {!! Form::label('body', 'Body:') !!}
                                 {!! Form::textarea('body', null) !!}
                             </div>
+
                             <div class="form-group">
-                                {!! Form::label('fig_orig', 'Thumbnail:') !!}
-                                {!! Form::file('data', null) !!}
+                                {!! Form::label('category', 'Category:') !!}
+                                {!! Form::select('category',['Model'=>'Model','View'=>'View','Controller'=>'Controller']) !!}
                             </div>
+
+                            <div class="form-group">
+                                {!! Form::label('tag', 'Tag:') !!}
+                                {!! Form::text('tag', null) !!}
+                            </div>
+
+                            <div class="form-group">
+                               {!! Form::label('fig_orig', 'Thumbnail:') !!}
+                               {!! Form::file('data', null) !!}
+                            </div>
+
                             <div class="form-group">
                                 {!! Form::submit('Articles') !!}
                             </div>
+
                             {!! Form::close() !!}
 
                     </div>

@@ -54,6 +54,8 @@ class ArticlesController extends Controller
         }
 
         $this->article->save();
+        return redirect('/events');
+
     }
 
     public function destroy($id)

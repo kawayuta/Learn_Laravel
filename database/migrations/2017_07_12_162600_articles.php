@@ -16,6 +16,8 @@ class Articles extends Migration
         Schema::create('articles', function(Blueprint $table){
             $table->increments('id');
             $table->string('title');
+            $table->string('category');
+            $table->string('tag');
             $table->text('body');
             $table->string('fig_name')->nullable(); //add
             $table->string('fig_mime')->nullable(); //add
