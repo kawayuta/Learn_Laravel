@@ -12,8 +12,9 @@
             <ul class="panel-body-fl">
                 @foreach ($articles_model as $model)
                     <li>
-                    {{$model->title}}
-                    {{$model->body}}
+                    <a href="{{action('ArticlesController@show', $model->id)}}">
+                        {{$model->title}}
+                    </a>
                     {{$model->category}}
                     {{$model->tag}}
                     </li>
@@ -30,9 +31,9 @@
             <ul class="panel-body-fl">
                 @foreach ($articles_view as $view)
                     <li>
-                    {{$view->title}}
-                    {{$view->body}}
-                    {{$view->category}}
+                    <a href="{{action('ArticlesController@show', $view->id)}}">
+                        {{$view->title}}
+                    </a>{{$view->category}}
                     {{$view->tag}}
                     </li>
                 @endforeach
@@ -48,8 +49,9 @@
             <ul class="panel-body-fl">
                 @foreach ($articles_controller as $controller)
                 <li>
-                    {{$controller->title}}
-                    {{$controller->body}}
+                    <a href="{{action('ArticlesController@show', $controller->id)}}">
+                        {{$controller->title}}
+                    </a>
                     {{$controller->category}}
                     {{$controller->tag}}
                 </li>
@@ -129,7 +131,9 @@
             <ul class="panel-body-fl">
                 @foreach ($articles as $article)
                     <li>
-                    {{$article->title}}
+                    <a href="{{action('ArticlesController@show', $article->id)}}">
+                        {{$article->title}}
+                    </a>
                     {{$article->body}}
                     {{$article->category}}
                     {{$article->tag}}
